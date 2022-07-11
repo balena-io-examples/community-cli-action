@@ -1,0 +1,45 @@
+name: 'balena CLI Action'
+description: 'A wrapper for the balena CLI'
+branding:
+  icon: 'code'  
+  color: 'blue'
+inputs:
+  application_path:
+    description: "Optional. Provide a subfolder path to your balena Cloud application (example: `./balena-path`)"
+    required: false
+    default: "."
+  balena_token:
+    description: 'Your balena Cloud API token'
+    required: true
+  balena_cli_version:
+    description: 'CLI version to use (example: `13.7.0`)'
+    required: true
+  balena_cli_commands:
+    description: "The commands for the CLI to execute"
+    required: true
+  balena_secrets:
+    description: "Optional contents of a balena secrets.json file"
+    required: false
+
+# Builds and then runs as separate steps as default GitHub method does not allow passing build args
+runs:
+  using: 'composite'
+  steps:
+    - id: build_image
+      run: docker build 
+        -t balena-cli-image 
+        --build-arg BALENA_CLI_VERSION=${{ inputs.balena_cli_version }} 
+        $GITHUB_ACTION_PATH
+      shell: bash
+    - id: run_image
+      run: docker run --rm
+        -e INPUT_APPLICATION_PATH=${{ inputs.application_path }} 
+        -e INPUT_BALENA_TOKEN=${{ inputs.balena_token }} 
+        -e INPUT_BALENA_SECRETS=${{ inputs.balena_secrets }} 
+        --network host
+        -v $(pwd):$(pwd)
+        -v /var/run/docker.sock:/var/run/docker.sock
+        --workdir $(pwd)
+        balena-cli-image
+        "${{ inputs.balena_cli_commands }}"
+      shell: bash
