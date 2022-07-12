@@ -18,11 +18,17 @@ on:
   # Manual runs
   # workflow_dispatch
 
-  # On pull requests
-  # pull_request
+  # On pull requests  
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - main
 
   # On push
-  # push
+  # push:
+  #   branches:
+  #     - master
+  #     - main
 
   # On push of a tag
   push:
@@ -73,15 +79,6 @@ Here is an example for pushing as a release:
 name: Balena Deploy
 
 on:
-  # Manual runs
-  # workflow_dispatch
-
-  # On pull requests
-  # pull_request
-
-  # On push
-  # push
-
   # On push of a tag
   push:
     tags:
