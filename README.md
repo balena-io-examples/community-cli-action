@@ -51,7 +51,7 @@ jobs:
             os download raspberrypi4-64 --version v2.99.27 -o ./rpi-4.img;
             preload rpi-4.img --fleet my-app --commit latest;
             os configure rpi-4.img --config-network=ethernet --fleet my-app
-          balena_cli_version: 13.7.0
+          balena_cli_version: 13.7.1
 ```
 
 ## Inputs
@@ -62,7 +62,7 @@ Inputs are provided using the `with:` section of your workflow YML file.
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ------- |
 | balena_token        | API key to balena Cloud available from the [Balena Dashboard](https://dashboard.balena-cloud.com/preferences/access-tokens). Tokens need to be stored in GitHub as an [encrypted secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) that GitHub Actions can access. | true     |         |
 | balena_cli_commands | CLI commands you would like to execute. Separate multiple commands with a `;`. There is an example workflow in this README.                                                                                                                                                                                                                | true     |         |
-| balena_cli_version  | CLI version to use (example: `13.7.0`)                                                                                                                                                                                                                                                                                                     | true     |         |
+| balena_cli_version  | CLI version to use (example: `13.7.1`)                                                                                                                                                                                                                                                                                                     | true     |         |
 | application_path    | Provide a sub-path to the location for application being deployed to BalenaCloud. Defaults to the workspace root.                                                                                                                                                                                                                          | false    | './'    |
 | balena_secrets      | Provide the contents of a balena secrets.json file for authenticating against private registries.                                                                                                                                                                                                                                          | false    |         |
 
@@ -100,7 +100,7 @@ jobs:
             os download raspberrypi4-64 --version v2.99.27 -o ./rpi-4.img;
             preload rpi-4.img --fleet my-app --commit latest;
             os configure rpi-4.img --config-network=ethernet --fleet my-app
-          balena_cli_version: 13.7.0
+          balena_cli_version: 13.7.1
 
       - name: Publish release
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
