@@ -15,21 +15,6 @@ Here is an example workflow.yml file. Workflow files should be added to the `.gi
 name: Balena Deploy
 
 on:
-  # Manual runs
-  # workflow_dispatch
-
-  # On pull requests  
-  # pull_request:
-  #   branches:
-  #     - master
-  #     - main
-
-  # On push
-  # push:
-  #   branches:
-  #     - master
-  #     - main
-
   # On push of a tag
   push:
     tags:
