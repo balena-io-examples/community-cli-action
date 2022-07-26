@@ -27,8 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Balena Deploy
-        uses: maggie0002/balena-cli-action@v1
+      - name: balena CLI Action
+        uses: balena-community/community-cli-action@1.0.0
         with:
           balena_token: ${{secrets.BALENA_TOKEN}}
           balena_cli_commands: >
@@ -76,8 +76,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Balena Deploy
-        uses: maggie0002/balena-cli-action@v1
+      - name: balena CLI Action
+        uses: balena-community/community-cli-action@1.0.0
         with:
           balena_token: ${{secrets.BALENA_TOKEN}}
           balena_cli_commands: >
