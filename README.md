@@ -6,7 +6,7 @@ This is a community built GitHub action that allows you to use the balena CLI. Y
 
 ## Usage
 
-Here is an example workflow.yml file. Workflow files should be added to the `.github/workflows/` directory within your project.
+Here is an example workflow.yml file that deploys to a fleet. Workflow files should be added to the `.github/workflows/` directory within your project.
 
 ```
 # Full list of options available at:
@@ -33,9 +33,6 @@ jobs:
           balena_token: ${{secrets.BALENA_TOKEN}}
           balena_cli_commands: >
             push my-production-repo;
-            os download raspberrypi4-64 --version v2.99.27 -o ./rpi-4.img;
-            preload rpi-4.img --fleet my-app --commit latest;
-            os configure rpi-4.img --config-network=ethernet --fleet my-app
           balena_cli_version: 13.7.1
 ```
 
@@ -53,7 +50,7 @@ Inputs are provided using the `with:` section of your workflow YML file.
 
 ## Outputs
 
-If using the balena Preload functionality as in the example workflow above, your preloaded image file will be available in the default workspace directory (./) of the GitHub workflow and can be accessed by the next section of your workflow. Another section can then be used to upload the preloaded image to your GitHub releases, a website or anything else you choose (consider compressing the image first).
+If you would like to use the balena Preload functionality you can use the workflow below. Your preloaded image file will be available in the default workspace directory (./) of the GitHub workflow and can then be used to upload the preloaded image to your GitHub releases, a website or anything else you choose (consider compressing the image first).
 
 Here is an example for pushing as a release:
 
