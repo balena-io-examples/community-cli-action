@@ -1,4 +1,4 @@
-<img src="https://github.com/maggie0002/balena-apps-logo/raw/main/logo.png" width="75" />
+<img src="https://raw.githubusercontent.com/balena-labs-research/apps-logo/main/logo.png" width="75" />
 
 # Balena CLI GitHub Action
 
@@ -34,6 +34,8 @@ jobs:
             push username/your-production-fleet;
           balena_cli_version: 13.7.1
 ```
+
+More examples can be found in the `examples` folder. If you have an example to contribute, please do raise a PR.
 
 ### Preload
 
