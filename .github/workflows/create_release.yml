@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Publish release
-        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        uses: "balena-io-experimental/automatic-release-action@stable"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
