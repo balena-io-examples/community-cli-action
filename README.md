@@ -21,7 +21,7 @@ on:
 
 jobs:
   balena-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -57,7 +57,7 @@ on:
 
 jobs:
   balena-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
