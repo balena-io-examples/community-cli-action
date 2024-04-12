@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/balena-labs-research/apps-logo/main/logo.png" width="75" />
+<img src="https://raw.githubusercontent.com/balena-io-experimental/apps-logo/main/logo.png" width="75" />
 
 # Balena CLI GitHub Action
 
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: balena CLI Action
-        uses: balena-labs-research/community-cli-action@1.0.0
+        uses: balena-io-experimental/community-cli-action@1.0.0
         with:
           balena_token: ${{secrets.BALENA_TOKEN}}
           balena_cli_commands: >
@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: balena CLI Action
-        uses: balena-labs-research/community-cli-action@1.0.0
+        uses: balena-io-experimental/community-cli-action@1.0.0
         with:
           balena_token: ${{secrets.BALENA_TOKEN}}
           balena_cli_commands: >
