@@ -1,0 +1,14 @@
+- commits:
+    - subject: Switch to Flowzone for automatic releases
+      hash: 8c47f6f0feed70cb24b7a4b4bac172ffabdec737
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.2
+  title: ""
+  date: 2024-04-12T12:56:15.053Z
