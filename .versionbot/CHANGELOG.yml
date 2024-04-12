@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update the GitHub org
+      hash: b4d5e3a89a15a50f5ded9db25d1cec486d4bc96b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.3
+  title: ""
+  date: 2024-04-12T13:48:56.276Z
+- commits:
     - subject: Switch to Flowzone for automatic releases
       hash: 8c47f6f0feed70cb24b7a4b4bac172ffabdec737
       body: ""
